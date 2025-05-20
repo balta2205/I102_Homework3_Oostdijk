@@ -1,8 +1,6 @@
 #include "Posicion.h"
 
-#include <iostream>
-#include <fstream>
-
+// Constructores, uno para float y otro para copia.
 Posicion::Posicion(float latitud, float longitud, float altitud, float tiempoMedicion):
     MedicionBase(tiempoMedicion),
     latitud(latitud),
@@ -16,6 +14,8 @@ Posicion::Posicion(const Posicion& other)
       longitud(other.longitud),
       altitud(other.altitud) {}
 
+
+// Métodos para serializar y deserializar e imprimir.	
 void Posicion::serializar(std::ofstream& out) const {
     MedicionBase::serializar(out);
     out.write(reinterpret_cast<const char*>(&latitud), sizeof(latitud));

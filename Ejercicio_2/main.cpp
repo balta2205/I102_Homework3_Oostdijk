@@ -25,11 +25,11 @@ int main(){
     // Calculo las areas de cada figura.
     std::cout << "\nAreas del ejercicio 2:" << std::endl;
     std::cout << "===========================" << std::endl;
-    procesadorCirculo.Area(circulo);
+    procesadorCirculo.Area(circulo); // Area del circulo.
     std::cout << "===========================" << std::endl;
-    procesadorElipse.Area(elipse);
+    procesadorElipse.Area(elipse); // Area de la elipse.
     std::cout << "===========================" << std::endl;
-    procesadorRectangulo.Area(rectangulo);
+    procesadorRectangulo.Area(rectangulo); // Area del rectangulo.
     std::cout << "===========================\n" << std::endl;
 
     return 0;

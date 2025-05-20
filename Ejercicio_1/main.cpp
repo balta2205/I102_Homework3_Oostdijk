@@ -1,8 +1,5 @@
 #include "SaveFlightData.h"
 
-#include <iostream>
-#include <fstream>
-
 int main() {
     // Creacion de objetos de datos iniciales.
     Posicion posicion_Inicial(-34.6f, -58.4f, 950.0f, 5.3);
@@ -42,7 +39,7 @@ int main() {
     std::cout << "==================================" << std::endl;
     std::cout << "Deserializacion Completada. Datos:" << std::endl;
     save_des.imprimir();
-    std::cout << "Fin del programa.\n\n" << std::endl;
+    std::cout << "Fin del programa.\n" << std::endl;
 
     return 0;  
 }

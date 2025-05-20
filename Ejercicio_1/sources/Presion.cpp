@@ -1,8 +1,6 @@
 #include "Presion.h"
 
-#include <iostream>
-#include <fstream>
-
+// Constructor, uno para float y otro para copia.
 Presion::Presion(float presionEstatica, float presionDinamica, float tiempoMedicion) : 
     MedicionBase(tiempoMedicion),
     presionEstatica(presionEstatica),
@@ -15,6 +13,7 @@ Presion::Presion(const Presion& other) :
     presionDinamica(other.presionDinamica) 
 {}
 
+// Métodos para serializar y deserializar e imprimir.
 void Presion::serializar(std::ofstream& out) const {
     MedicionBase::serializar(out);
     out.write(reinterpret_cast<const char*>(&presionEstatica), sizeof(presionEstatica));

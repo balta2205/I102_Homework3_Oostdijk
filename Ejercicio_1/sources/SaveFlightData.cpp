@@ -1,13 +1,12 @@
 #include "SaveFlightData.h"
 
-#include <iostream>
-#include <fstream>
-
+// Constructor.
 SaveFlightData::SaveFlightData(const Posicion& posicion, const Presion& presion) :
     posicion(posicion),
     presion(presion)
 {}
 
+// Métodos para serializar y deserializar e imprimir.
 void SaveFlightData::serializar(std::ofstream& out) const {
     posicion.serializar(out);
     presion.serializar(out);
