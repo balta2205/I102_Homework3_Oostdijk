@@ -35,4 +35,24 @@ class ProcesadorFigura<Rectangulo>{ // Especializacion de la clase ProcesadorFig
         void Area(Rectangulo& rectangulo) {std::cout << "Area del rectangulo: " << rectangulo.getAncho() * rectangulo.getLargo() << std::endl;}
 };
 
+template <typename T>
+class Procesador {
+    public:
+        void Area(T& figura) { // Metodo para calcular el area de la figura.
+            if constexpr (std::is_same_v<T, Circulo>){
+                std::cout << "Area del circulo: " << circulo.getRadio() * circulo.getRadio() * PI << std::endl;
+            }
+            else if constexpr (std::is_same_v<T, Elipse>){
+                std::cout << "Area de la elipse: " << elipse.getSemiMayor() * elipse.getSemiMenor() * PI << std::endl;
+            }
+            else if constexpr (std::is_same_v<T, Rectangulo>){
+                std::cout << "Area del rectangulo: " << rectangulo.getAncho() * rectangulo.getLargo() << std::endl;
+            }
+            else {
+                std::cout << "ERROR: No es posible calcular area." << std::endl;
+            }
+        }
+}
+
+
 #endif // PROCESADORFIGURA.H

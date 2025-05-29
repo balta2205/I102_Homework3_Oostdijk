@@ -11,7 +11,7 @@ ej2:
 	rm -rf ej2.dSYM/
 
 ej3:
-	g++ -Wall -Wextra -Wpedantic -std=c++17 -o ej3 Ejercicio_3/examples/main_ej3.cpp
+	g++ -Wall -Wextra -Wpedantic -std=c++17 -I Ejercicio_3/headers -o ej3 Ejercicio_3/examples/main_ej3.cpp 
 	./ej3
 	rm ej3
 	rm -rf ej3.dSYM/
